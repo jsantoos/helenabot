@@ -1,0 +1,34 @@
+# Ambiente virtual
+.venv/
+
+# PyCache
+__pycache__/
+*.py[cod]
+
+# VSCode
+.vscode/
+
+# Dados temporários
+*.log
+*.sqlite3
+
+# Modelos salvos ou embeddeds
+clients/*/chroma_db/
+
+# Dotenvs
+.env
+.venv/
+venv/
+env/
+.env.*
+!.env.example
+
+# MongoDB
+mongo-data
+
+# coverage
+.coverage
+
+
+# log
+*.log*

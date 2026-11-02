@@ -1,0 +1,44 @@
+# pyproject.toml
+
+[project]
+name = "HelenaBot"
+version = "0.1.0"
+description = "Bot that interacts with users by providing detailed insights on surgical instrumentation and orthopedics, based on information extracted from PDF documents. This intelligent assistant is designed to engage in natural conversations with users, answering questions and offering in-depth explanations related to surgical instruments, orthopedic procedures, and related medical topics. It leverages advanced PDF processing to extract relevant content from technical and academic documents, ensuring accurate and informative responses grounded in real-world sources. Ideal for students, healthcare professionals, and anyone interested in surgical and orthopedic knowledge."
+authors = [
+    {name = "João Pedro de Souza Santos"}
+]
+readme = "README.md"
+requires-python = "3.12.7"
+dependencies = [
+    "flask",
+    "python-telegram-bot",
+    "llama-index (==0.10.26)",
+    "llama-index-embeddings-huggingface (==0.1.4)",
+    "llama-index-vector-stores-chroma (==0.1.4)",
+    "llama-index-llms-groq (==0.1.4)",
+    "pypdf (>=4.0.1,<5.0.0)",
+    "pdfminer-six (>=20240706,<20240707)",
+    "pymongo (>=4.11.3,<5.0.0)",
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    "pymupdf (>=1.25.4,<2.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "pypdf2 (>=3.0.1,<4.0.0)",
+    "pycryptodome (>=3.22.0,<4.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.6"
+pytest-cov = "^6.1.1"
+pytest-mock = "^3.14.0"
+
+[tool.poetry]
+name = "helena-bot"
+packages = [{ include = "helena_bot", from = "src" }]

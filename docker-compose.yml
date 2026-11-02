@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+    networks:
+      - helena-shared
+    restart: unless-stopped
+
+networks:
+  helena-shared:
+    name: helena-shared
+    driver: bridge
