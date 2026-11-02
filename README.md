@@ -160,6 +160,34 @@ The presence of automated tests does not imply that the entire suite has been ve
 
 The Telegram interface also provides `/ajuda` (help) and `/sobre` (about) commands and supports text or voice messages through the implemented handlers.
 
+## Development Roadmap
+
+HelenaBot is an evolving project. The items below describe **planned work**, not features that are necessarily implemented today. Progress can be tracked by checking off tasks here or by linking them to GitHub Issues.
+
+### Near term — Repository quality and reproducibility
+
+- [ ] Document the end-to-end document ingestion and indexing workflow with reproducible examples.
+- [ ] Provide a safe `.env.example` and validate required configuration at startup.
+- [ ] Add CI checks for formatting, linting, and automated tests.
+- [ ] Expand unit and integration tests for ingestion, retrieval, and Telegram handlers.
+- [ ] Add a small, redistributable sample document set for local demos.
+
+### Mid term — General-purpose document intelligence
+
+- [ ] Expand and validate file upload support beyond PDFs (e.g., TXT, DOCX, and Markdown).
+- [ ] Add file-size limits, type validation, and clear upload error messages.
+- [ ] Support per-user or per-workspace document collections and re-indexing.
+- [ ] Add source citations and document references to generated answers.
+- [ ] Benchmark retrieval quality and answer grounding using a repeatable evaluation dataset.
+
+### Longer term — Production readiness
+
+- [ ] Introduce authentication and access controls for document collections.
+- [ ] Improve observability with structured logs, metrics, and request tracing.
+- [ ] Add configurable model and embedding providers with failure handling.
+- [ ] Document containerized deployment and backup/recovery procedures.
+- [ ] Build a lightweight web interface for document upload, indexing status, and chat.
+
 ## Security and Limitations
 
 - HelenaBot is intended for **educational and reference support**; it is not a substitute for professional medical judgment, advice, or clinical decisions.
